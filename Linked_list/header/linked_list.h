@@ -28,5 +28,6 @@ class LinkedList
     bool remove(int data);
     bool removeFromHead(int &data);
     bool removeFromTail(int &data);
-
-}
+    
+    bool isEmpty();
+};
