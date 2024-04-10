@@ -22,8 +22,8 @@ class LinkedList
     ~LinkedList();
 
     void add(Node *pred,int data);
-    void addToHead(int data);
-    void addToTail(int data);
+    bool addToHead(int data);
+    bool addToTail(int data);
 
     bool remove(int data);
     bool removeFromHead(int &data);

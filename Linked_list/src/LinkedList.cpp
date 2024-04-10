@@ -1,23 +1,60 @@
 #include "linked_list.h"
+using namespace std;
 
-
-void LinkedList::addToHead(int data)
+bool LinkedList::addToHead(int data)
 {
-    Node *newNode = new Node(data,HEAD);
+    Node *newNode = new Node;
 
     if(this->isEmpty())
     {
-
+      newNode->info = data;
+      newNode->next = nullptr;
+      HEAD = newNode;
+      TAIL = newNode;
+      return true;
     }
-}
+    else
+    {
+        newNode->info = data;
+        newNode->next = HEAD->next;
+        HEAD= newNode;
+        cout<<"Done"<<endl;
+        return true;
+    }
+    return false;
+
+   }
+  
+
 
     void LinkedList:: add(Node *pred,int data)
     {
 
     }
    
-    void LinkedList::addToTail(int data)
+    bool LinkedList::addToTail(int data)
     {
+         Node *newNode = new Node;
+
+         if(isEmpty())
+         {
+            newNode->info = data;
+            newNode->next = nullptr;
+            HEAD = newNode;
+            TAIL = newNode;
+         return true;
+         }
+         else 
+         {
+            newNode->info = data;
+            newNode->next = nullptr;
+            newNode->next = TAIL->next;
+            TAIL->next = newNode;
+            cout<<"Done"<<endl;
+            return true;
+         }
+         return false;
+
 
     }
 
