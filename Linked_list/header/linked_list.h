@@ -1,33 +1,30 @@
-#pragma once 
-#include <iostream>
-class Node 
-{
-  public:
-  int info;
-  Node * next;
+#ifndef LINKEDLIST_H
+#define LINKEDLIST_H
 
-  Node (){}
-  Node (int d) : info(d), next(NULL) {}
-  Node(int d,Node *next ): info(d),next(next) {}
+class Node {
+public:
+    int data;
+    Node* next;
+
+    Node(int data);
 };
 
-class LinkedList 
-{
-    private:
-    Node* HEAD;
-    Node* TAIL;
+class SinglyLinkedList {
+private:
+    Node* head;
 
-    public:
-    LinkedList();
-    ~LinkedList();
+public:
+    SinglyLinkedList();
 
-    void add(Node *pred,int data);
-    bool addToHead(int data);
-    bool addToTail(int data);
-
-    bool remove(int data);
-    bool removeFromHead(int &data);
-    bool removeFromTail(int &data);
-    
     bool isEmpty();
+    void addToHead(int data);
+    void addToTail(int data);
+    void add(int data, Node* predecessor);
+    void removeFromHead();
+    void remove(int data);
+    Node* retrieve(int data);
+    bool search(int data);
+    void traverse();
 };
+
+#endif
