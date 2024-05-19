@@ -1,5 +1,5 @@
-#ifndef LINKEDLIST_H
-#define LINKEDLIST_H
+#ifndef linkedlist_h
+#define linkedlist_h
 
 class Node {
 public:
