@@ -1,5 +1,5 @@
-#include <iostream>
-#include "linked_list.h"
+
+#include "LinkedList.cpp"
 
 int main() {
     SinglyLinkedList my_list;
